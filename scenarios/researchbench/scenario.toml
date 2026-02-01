@@ -1,0 +1,37 @@
+# ResearchToolBench Scenario Configuration
+# Combines τ²-Bench Challenge + OpenEnv Challenge concepts
+# For AgentBeats Competition - Phase 1
+
+[green]
+name = "ResearchToolBench"
+agentbeats_id = ""  # Fill after registering on agentbeats.dev
+image = "ghcr.io/arunshar/researchbench-green:latest"  # Replace YOUR_USERNAME
+port = 8000
+env = { OPENAI_API_KEY = "${OPENAI_API_KEY}" }
+
+[[participants]]
+name = "researcher"
+agentbeats_id = ""  # Fill after registering purple agent on agentbeats.dev
+image = "ghcr.io/arunshar/researchbench-purple:latest"  # Replace YOUR_USERNAME
+port = 8001
+env = { OPENAI_API_KEY = "${OPENAI_API_KEY}" }
+
+[config]
+# Assessment configuration
+num_tasks = 4
+num_trials = 2
+pass_threshold = 70
+
+# Domains (technical has dual-control like τ²-bench telecom)
+domains = ["academic", "news", "technical"]
+
+# Evaluation metrics
+metrics = [
+    "tool_use_score",
+    "source_score", 
+    "fact_score",
+    "policy_score",
+    "db_state_score",
+    "pass_at_1",
+    "pass_at_2"
+]
