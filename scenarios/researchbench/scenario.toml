@@ -4,14 +4,14 @@
 
 [green]
 name = "ResearchToolBench"
-agentbeats_id = ""  # Fill after registering on agentbeats.dev
+agentbeats_id = 019c1713-c5d3-7d60-974f-14a790d031bb  # Fill after registering on agentbeats.dev
 image = "ghcr.io/arunshar/researchbench-green:latest"  # Replace YOUR_USERNAME
 port = 8000
 env = { OPENAI_API_KEY = "${OPENAI_API_KEY}" }
 
 [[participants]]
 name = "researcher"
-agentbeats_id = ""  # Fill after registering purple agent on agentbeats.dev
+agentbeats_id = 019c1717-1145-7480-bb7c-58678bab37d6  # Fill after registering purple agent on agentbeats.dev
 image = "ghcr.io/arunshar/researchbench-purple:latest"  # Replace YOUR_USERNAME
 port = 8001
 env = { OPENAI_API_KEY = "${OPENAI_API_KEY}" }
